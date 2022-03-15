@@ -10,19 +10,17 @@
             sizes="32x32"
             href="./images/favicon-32x32.png"
         />
-
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/navigation.css" />
+        <link rel="stylesheet" href="css/sections.css" />
+        <link rel="stylesheet" href="css/footer.css" />
         <title>Frontend Mentor | [Blogr]</title>
-
-        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-        <style>
-            .attribution {
-                font-size: 11px;
-                text-align: center;
-            }
-            .attribution a {
-                color: hsl(228, 45%, 44%);
-            }
-        </style>
     </head>
     <body>
         <header>
@@ -91,8 +89,10 @@
         </header>
 
         <main>
-            <section class="wrapper" style="background-color: lightblue">
+            <section class="wrapper">
                 <h2 class="title">Designed for the future</h2>
+
+                <img src="./images/illustration-editor-mobile.svg" alt="" />
                 <div class="content_wrapper">
                     <div class="content">
                         <div class="content-box">
@@ -123,29 +123,32 @@
                             </p>
                         </div>
                     </div>
-                    <div class="image">Image goes here</div>
                 </div>
             </section>
 
-            <section class="wrapper middle" style="background-color: lightpink">
-                <h2 class="title">State of the Art Infrastructure</h2>
-                <div class="content_wrapper">
-                    <div class="content">
-                        <div class="content-box">
-                            <p class="description">
-                                With reliability and speed in mind, worldwide
-                                data centers provide the backbone for ultra-fast
-                                connectivity. This ensures your site will load
-                                instantly, no matter where your readers are,
-                                keeping your site competitive.
-                            </p>
+            <section class="section_middle">
+                <div class="wrapper">
+                    <img src="./images/illustration-phones.svg" alt="" />
+                    <h2 class="title">State of the Art Infrastructure</h2>
+                    <div class="content_wrapper">
+                        <div class="content">
+                            <div class="content-box">
+                                <p class="description">
+                                    With reliability and speed in mind,
+                                    worldwide data centers provide the backbone
+                                    for ultra-fast connectivity. This ensures
+                                    your site will load instantly, no matter
+                                    where your readers are, keeping your site
+                                    competitive.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="image">Image goes here</div>
                 </div>
             </section>
 
-            <section class="wrapper" style="background-color: lightblue">
+            <section class="wrapper">
+                <img src="./images/illustration-laptop-mobile.svg" alt="" />
                 <div class="content_wrapper">
                     <div class="content">
                         <div class="content-box">
@@ -176,7 +179,6 @@
                             </p>
                         </div>
                     </div>
-                    <div class="image">Image goes here</div>
                 </div>
             </section>
         </main>

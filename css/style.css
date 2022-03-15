@@ -1,0 +1,58 @@
+:root {
+    /* Colors Primary */
+    --clr-primary-cta-text: hsl(356, 100%, 66%);
+    --clr-primary-cta-bg: hsl(355, 100%, 74%);
+    --clr-primary-headings: hsl(208, 49%, 24%);
+    /* Colors Neutral */
+    --clr-neutral-text: hsl(0, 0%, 100%);
+    --clr-neutral-footer-text: hsl(240, 2%, 79%);
+    --clr-neutral-body-copy: hsl(207, 13%, 34%);
+    --clr-neutral-footer-bg: hsl(240, 10%, 16%);
+    /* Background gradient - Intro/CTA mobile nav: */
+    --bg-gradient-intro-very-light-red: hsl(13, 100%, 72%);
+    --bg-gradiet-intro-light-red: hsl(353, 100%, 62%);
+    /* Background gradient - body: */
+    --bg-gradient-body-gray-blue: hsl(237, 17%, 21%);
+    --bg-gradient-body-desaturated-blue: hsl(237, 23%, 32%);
+    /* Font overpass */
+    --ff-overpass: "Overpass", sans-serif;
+    --fw-overpass-light: 300;
+    --fw-overpass-semibold: 600;
+    /* Font ubuntu */
+    --ff-ubuntu: "Ubuntu", sans-serif;
+    --fw-ubuntu-regular: 400;
+    --fw-ubuntu-medium: 500;
+    --fw-ubuntu-retular: 700;
+
+    /* Media queries */
+    --mobile-width: 375px;
+    --desktop-width: 1440px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

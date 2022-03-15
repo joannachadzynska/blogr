@@ -1,0 +1,56 @@
+:root {
+    /* Colors Primary */
+    --clr-primary-cta-text: hsl(356, 100%, 66%);
+    --clr-primary-cta-bg: hsl(355, 100%, 74%);
+    --clr-primary-headings: hsl(208, 49%, 24%);
+    /* Colors Neutral */
+    --clr-neutral-text: hsl(0, 0%, 100%);
+    --clr-neutral-footer-text: hsl(240, 2%, 79%);
+    --clr-neutral-body-copy: hsl(207, 13%, 34%);
+    --clr-neutral-footer-bg: hsl(240, 10%, 16%);
+    /* Background gradient - Intro/CTA mobile nav: */
+    --bg-gradient-intro-very-light-red: hsl(13, 100%, 72%);
+    --bg-gradient-intro-light-red: hsl(353, 100%, 62%);
+    /* Background gradient - body: */
+    --bg-gradient-body-gray-blue: hsl(237, 17%, 21%);
+    --bg-gradient-body-desaturated-blue: hsl(237, 23%, 32%);
+    /* Font overpass */
+    --ff-overpass: "Overpass", sans-serif;
+    --fw-overpass-light: 300;
+    --fw-overpass-semibold: 600;
+    /* Font ubuntu */
+    --ff-ubuntu: "Ubuntu", sans-serif;
+    --fw-ubuntu-regular: 400;
+    --fw-ubuntu-medium: 500;
+    --fw-ubuntu-retular: 700;
+
+    /* Media queries */
+    --mobile-width: 375px;
+    --desktop-width: 1440px;
+}
+
+.section_middle {
+    min-height: 50vh;
+    position: relative;
+    z-index: 0;
+}
+
+.section_middle::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(../images/bg-pattern-circles.svg),
+        linear-gradient(
+            166deg,
+            var(--bg-gradient-body-gray-blue) 0%,
+            var(--bg-gradient-body-desaturated-blue) 100%
+        );
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    border-bottom-left-radius: 10rem;
+    border-top-right-radius: 10rem;
+    z-index: -1;
+}
