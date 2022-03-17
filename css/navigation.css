@@ -22,7 +22,7 @@
     --ff-ubuntu: "Ubuntu", sans-serif;
     --fw-ubuntu-regular: 400;
     --fw-ubuntu-medium: 500;
-    --fw-ubuntu-retular: 700;
+    --fw-ubuntu-bold: 700;
 
     /* Media queries */
     --mobile-width: 375px;
@@ -31,30 +31,23 @@
 
 details {
     position: relative;
-    border-radius: 6px;
     transition: background-color 0.15s;
-    max-width: 10rem;
+    width: 100%;
 }
 
 details > :last-child {
     margin-bottom: 1rem;
 }
 
-details::before {
-    width: 100%;
-    height: 100%;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.15;
-    pointer-events: none;
-    transition: opacity 0.2s;
-    z-index: -1;
+details ul li {
+    padding: 0.5rem;
 }
 
-details[open] {
-    background-color: #fff;
+details[open] ul {
+    background-color: var(--clr-neutral-footer-text);
+    border-radius: 5px;
+    margin: 1rem 0;
+    padding-block: 1rem;
 }
 
 details[open]::before {
@@ -62,30 +55,33 @@ details[open]::before {
 }
 
 summary {
-    display: block;
-    position: relative;
-    font-weight: bold;
+    display: inline-block;
+    font-weight: var(--fw-overpass-semibold);
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
+    height: 100%;
 }
 
-summary::after {
+summary span {
+    position: relative;
+}
+
+summary span::after {
     position: absolute;
-    top: 50%;
-    right: 0;
+    top: calc(50% - 0.3rem);
+    right: -1rem;
     content: "";
+    transform: translate(0, -40%);
     transition: transform 0.2s ease-in-out;
-    transform: translateY(-50%);
-    transform-origin: center;
-    border: solid black;
-    border-width: 0 3px 3px 0;
+    border: solid var(--bg-gradient-intro-light-red);
+    border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 3px;
 }
-summary::after {
+summary span::after {
     transform: rotate(45deg);
 }
-[open] summary::after {
+[open] summary span::after {
     transform: rotate(-135deg);
 }
 summary::-webkit-details-marker {
@@ -93,7 +89,7 @@ summary::-webkit-details-marker {
 }
 
 header {
-    min-height: 100vh;
+    min-height: 70vh;
     position: relative;
     z-index: 0;
 }
@@ -115,4 +111,127 @@ header::before {
     background-attachment: fixed;
     border-bottom-left-radius: 10rem;
     z-index: -1;
+}
+
+.jumbotron {
+    color: var(--clr-neutral-text);
+}
+
+.btn_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn_link {
+    font-family: var(--ff-ubuntu);
+    font-weight: var(--fw-ubuntu-bold);
+    font-size: clamp(1rem, 2.5vw, 1.75rem);
+    padding: 0.1em 1.2em;
+    border: 2px solid var(--clr-neutral-text);
+    border-radius: 50px;
+    min-width: 9rem;
+    display: grid;
+    place-content: center;
+    white-space: nowrap;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn_link:hover,
+.btn_link.cta {
+    background-color: var(--clr-neutral-text);
+    color: var(--clr-primary-cta-text);
+}
+
+.btn_link.cta:hover {
+    background-color: var(--clr-primary-cta-bg);
+    border-color: var(--clr-primary-cta-bg);
+    color: var(--clr-neutral-text);
+}
+
+.btn_link.login {
+    padding: 0.5em 1.2em;
+    font-weight: var(--fw-ubuntu-medium);
+    max-width: 10rem;
+}
+
+.btn_link.sign-up {
+    background-image: linear-gradient(
+        90deg,
+        var(--bg-gradient-intro-very-light-red) 0%,
+        var(--bg-gradient-intro-light-red) 100%
+    );
+    color: var(--clr-neutral-text);
+    font-weight: var(--fw-ubuntu-medium);
+    padding: 0.5em 1.2em;
+    max-width: 10rem;
+}
+
+.btn_link.sign-up:hover {
+    background-color: var(--clr-primary-cta-bg);
+    /* background-image: none; */
+}
+
+.main_nav {
+    background-color: var(--clr-neutral-text);
+    min-width: min-content;
+    -webkit-box-shadow: 3px 7px 16px -9px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 3px 7px 16px -9px rgba(66, 68, 90, 1);
+    box-shadow: 3px 7px 16px -9px rgba(66, 68, 90, 1);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.main_nav ul,
+.login ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.login::before {
+    content: "";
+}
+
+.main_nav ul li {
+    /* padding: 0.25rem; */
+    width: 100%;
+}
+
+@media screen and (min-width: 48rem) {
+    .main_nav {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .btn_link.sign-up,
+    .btn_link.login:hover {
+        background-image: none;
+        background-color: var(--clr-neutral-text);
+        color: var(--clr-primary-cta-text);
+    }
+
+    .btn_link.sign-up:hover {
+        background-color: var(--clr-primary-cta-bg);
+        border-color: var(--clr-primary-cta-bg);
+        color: var(--clr-neutral-text);
+    }
+
+    .btn_link.login {
+        color: var(--clr-neutral-text);
+        min-width: 10rem;
+    }
+
+    .login ul {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
 }
