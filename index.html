@@ -26,14 +26,26 @@
         <header>
             <div class="wrapper">
                 <div class="navigation">
-                    <div class="logo">
-                        <strong>Blogr</strong>
-                    </div>
+                    <p class="logo">Blogr</p>
+                    <button id="mobile-menu" class="mobile__menu">
+                        <img
+                            class="hamburger"
+                            src="./images/icon-hamburger.svg"
+                            alt="hamburger"
+                        />
+                        <img
+                            class="close"
+                            src="./images/icon-close.svg"
+                            alt="close"
+                        />
+                    </button>
                     <nav class="main_nav">
                         <ul>
                             <li>
-                                <details>
-                                    <summary><span>Procuct</span></summary>
+                                <details data-target="details">
+                                    <summary>
+                                        <span data-target="span">Procuct</span>
+                                    </summary>
                                     <ul>
                                         <li><a href="#">Overwiev</a></li>
                                         <li><a href="#">Pricing</a></li>
@@ -44,8 +56,10 @@
                                 </details>
                             </li>
                             <li>
-                                <details>
-                                    <summary><span>Company</span></summary>
+                                <details data-target="details">
+                                    <summary>
+                                        <span data-target="span">Company</span>
+                                    </summary>
                                     <ul>
                                         <li><a href="#">About</a></li>
                                         <li><a href="#">Team</a></li>
@@ -55,8 +69,10 @@
                                 </details>
                             </li>
                             <li>
-                                <details>
-                                    <summary><span>Connect</span></summary>
+                                <details data-target="details">
+                                    <summary>
+                                        <span data-target="span">Connect</span>
+                                    </summary>
                                     <ul>
                                         <li><a href="#">Contact</a></li>
                                         <li><a href="#">Newsletter</a></li>
@@ -79,7 +95,9 @@
                 </div>
                 <div class="jumbotron">
                     <h1 class="title">A modern publishing platform</h1>
-                    <p>Grow your audience and build your online brand</p>
+                    <p class="jumbotron__subtitle">
+                        Grow your audience and build your online brand
+                    </p>
                     <div class="btn_container">
                         <a href="#" class="btn_link cta">
                             <p>Start For Free</p>
@@ -276,5 +294,6 @@
                 </div>
             </div>
         </footer>
+        <script src="js/main.js"></script>
     </body>
 </html>
